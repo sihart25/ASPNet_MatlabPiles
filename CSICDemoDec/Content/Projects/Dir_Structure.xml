@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dir name="NewProjV1">
+	<dir name="Main">
+		<dir name="Admin">
+			<dir name="Forms" />
+			<dir name="GeneralPaperwork" />
+		</dir>
+		<dir name="Analysis">
+			<dir name="Analysis-Excel" />
+			<dir name="Analysis-FEM" />
+			<dir name="Analysis-MatLab" />
+		</dir>
+		<dir name="Correspondence">
+			<dir name="Emails" />
+			<dir name="ScannedMaterials" />
+		</dir>
+		<dir name="Data">
+			<dir name="Data-ExternalData" />
+			<dir name="Data-RawData" />
+			<dir name="DataBaseDetails-LOCKED" />
+		</dir>
+		<dir name="Drawings">
+			<dir name="Drawings-Construction" />
+			<dir name="Drawings-Design" />
+		</dir>
+		<dir name="Finance">
+			<dir name="Funding_Financing" />
+			<dir name="ProjectCosting" />
+			<dir name="TimeSheets" />
+		</dir>
+		<dir name="GeneralSiteInformation">
+			<dir name="Drawings">
+				<dir name="Drawings-Current" />
+				<dir name="Drawings-Historic" />
+			</dir>
+			<dir name="Maps">
+				<dir name="Maps-Current" />
+				<dir name="Maps-Historic" />
+			</dir>
+			<dir name="SiteData">
+				<dir name="SiteData-Current" />
+				<dir name="SiteData-Historic" />
+			</dir>
+		</dir>
+		<dir name="Other" />
+		<dir name="Output">
+			<dir name="Output-Media">
+				<dir name="Output-Media-Draft" />
+				<dir name="Output-Media-Published" />
+			</dir>
+			<dir name="Output-Papers">
+				<dir name="Output-Papers-Draft" />
+				<dir name="Output-Papers-Published" />
+			</dir>
+			<dir name="Output-Presentations">
+				<dir name="Output-Presentations-Draft" />
+				<dir name="Output-Presentations-Published" />
+			</dir>
+			<dir name="Output-Reports">
+				<dir name="Output-Reports-Draft" />
+				<dir name="Output-Reports-Published" />
+			</dir>
+		</dir>
+		<dir name="SiteWorks">
+			<dir name="SiteWorks-ConstructionSequencing" />
+			<dir name="SiteWorks-Design" />
+			<dir name="SiteWorks-MethodStatements" />
+			<dir name="SiteWorks-Photos" />
+		</dir>
+	</dir>
+</dir>

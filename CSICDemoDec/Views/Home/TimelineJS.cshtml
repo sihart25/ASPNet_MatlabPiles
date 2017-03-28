@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "TimeLineJS-Test";
+    ViewBag.Message = "TimeLineJS - interactive - tests";
+}
+
+    @section featured {
+
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+<h1  >TimeLine Example</h1>
+<script type="text/javascript" src="~/Scripts/Timeline_js/js/storyjs-embed.js"></script>  
+<script type="text/javascript" src="~/Scripts/jquery-1.8.2.min.js"></script>   
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">  
+ Simon test 3
+    <!-- BEGIN Timeline Embed -->
+    <div id="timeline-embed">
+        <script type="text/javascript">
+
+            // here is a cross-browser compatible way of connecting
+            // handlers to events, in case you don't have one
+            function attachEventHandler(element, eventToHandle, eventHandler) {
+                if (element.attachEvent) {
+                    element.attachEvent(eventToHandle, eventHandler);
+                } else if (element.addEventListener) {
+                    element.addEventListener(eventToHandle.replace("on", ""), eventHandler, false);
+                } else {
+                    element[eventToHandle] = eventHandler;
+                }
+            }
+
+            var tl;
+            var resizeTimerID = null;
+            attachEventHandler(window, "onLoad", function ()
+            {
+                console.log(document.getElementById("timeline-embed"));
+                //var bandInfos = [
+                //   Timeline.createBandInfo({
+                //       width: "70%",
+                //       intervalUnit: Timeline.DateTime.MONTH,
+                //       intervalPixels: 100
+                //   }),
+                //   Timeline.createBandInfo({
+                //       width: "30%",
+                //       intervalUnit: Timeline.DateTime.YEAR,
+                //       intervalPixels: 200
+                //   })
+                //];
+                //bandInfos[1].syncWith = 0;
+                //bandInfos[1].highlight = true;
+
+                //tl = Timeline.create(document.getElementById("timeline-embed"), bandInfos);
+                //Timeline.loadXML("example1.xml", function (xml, url) { eventSource.loadXML(xml, url); });
+            });
+
+            //attachEventHandler(window, "onresize", function () {
+            //    if (resizeTimerID == null) {
+            //        resizeTimerID = window.setTimeout(function () {
+            //            resizeTimerID = null;
+            //            tl.layout();
+            //        }, 500);
+            //    }
+            //});
+        </script>   
+    </div> 
+    <!-- END Timeline Embed-->
+ 

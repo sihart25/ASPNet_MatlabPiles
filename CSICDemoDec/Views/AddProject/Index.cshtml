@@ -1,0 +1,280 @@
+﻿
+
+@model   CSICDemoDec.Models.Project 
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" src="~/Scripts/jquery-2.1.1.min.js"></script> 
+<script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWP8Ns_S36znriuRlrwXBMwS56Y9yylzI"></script>
+<style>
+    #map-canvas {
+        width: 500px;
+        height: 400px;
+        background-color: #CCC;
+    }
+</style>
+<script type="text/javascript" >
+    var uhr = new Date();
+    var min;
+    var hour;
+    var sec;
+    var interval = 500;
+    var  JS_reftest="test";
+    var map;
+    //declare addMarker function
+    function addMarker(latitude, longitude, title, description, map)
+    {
+        var latLng = new google.maps.LatLng(latitude, longitude);
+        var contentString = '<h3>' + title + '</h3>' + '<p>' + description + '</p>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+            position: latLng,
+            title: title,
+            map: map,
+            draggable: false
+        });
+
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.open(map, marker);
+        });
+    }
+
+
+
+    function addloc() {
+        var lat = '@Model.ProjectLocation.Longitude';
+        var long = '@Model.ProjectLocation.Latitude';
+        console.log(lat);
+        console.log(long);
+
+        var myLatlng = new google.maps.LatLng(lat, long);
+        var mapOptions = {
+            zoom: 4,
+            center: myLatlng
+        }
+        var panPoint = new google.maps.LatLng(document.getElementById("lat").value, document.getElementById("lng").value);
+        map.panTo(panPoint)
+    }
+
+    function initialize() {
+        var lat = '@Model.ProjectLocation.Longitude';
+        var long = '@Model.ProjectLocation.Latitude';
+        console.log(lat);
+        console.log(long);
+
+        var myLatlng = new google.maps.LatLng(lat, long);
+        var mapOptions = {
+            zoom: 8,
+            center: myLatlng
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        addMarker(lat, long, Project, description, map)
+        console.log("HELLO -initialize ");
+    }
+
+
+    function datum(id) {
+        uhr.setTime(uhr.getTime() + interval);
+        window.setTimeout(function () { datum(id) }, interval);
+        min = uhr.getMinutes();
+        hour = uhr.getHours();
+        sec = uhr.getSeconds();
+        if (min < 10) { min = '0' + min; }
+        if (sec < 10) { sec = '0' + sec; }
+        if (hour < 10) { hour = '0' + hour; }
+        document.getElementById(id).innerHTML = 'Time: ' + hour + ':' + min + ':' + sec;
+    }
+
+    function projtype(i) {
+
+
+        console.log("projtype button:" + i);
+        ProjectIsBeam = false;
+        ProjectIsPile = false;
+        ProjectIsTunnel = false;
+        ProjectIsDWall = false;
+        switch (i) {
+            case 0:
+                ProjectIsBeam = true;
+                break;
+            case 1:
+                ProjectIsPile = true;
+                break;
+            case 2:
+                ProjectIsTunnel = true;
+                break;
+            case 3:
+                ProjectIsDWall = true;
+                break;
+        }
+    }
+    function Create() {
+        Url.Action("Create", "AddProject", model)
+        console.log("HELLO -Create ");
+    }
+
+    $(document).ready(function () {
+        datum("uhr");
+        $("#addLocButton").click(addloc);
+        initialize();
+    }); 
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="float-left">
+    <img src="~/Content/Images/CSIC_Logo.png" height="82" />
+    <h3> Innovation and Knowledge Centre funded by EPSRC and Technology Strategy Board</h3>
+</div>
+
+
+
+<section class="featured">
+    <div class="content-wrapper">
+        <hgroup class="title">
+            <h1>@ViewBag.Title</h1>
+            <h2>@ViewBag.Message</h2>
+        </hgroup>
+    </div>
+
+</section>
+<div>
+    <div >
+        <ul>
+            <li><h3>ProjectRefNo:</h3><p>              @{
+                              string refs = string.Join(",",Model.ProjectRefNo);
+                              Html.TextBoxFor(model=>model.ProjectRefNo, new { id = "ProjectRefNo", value = refs });
+                         }
+                    </p>
+                   </li>
+            <li><h3>ProjectName:</h3><p> @Html.TextBoxFor(model => model.ProjectName)</p></li>
+            <li><h3>Project Start Date :</h3><p> @Html.EditorFor(model => model.ProjectStartDate, new { PreviousYearCount = 10, NextYearCount = 10 } )</p></li>
+            <li><h3>ProjectDescription:</h3><p>@Html.TextAreaFor(model => model.ProjectDescription, new { id = "textarea1", cols = "350", rows = "5", wrap = "virtual" ,style="overflow:auto;resize:none"})  </p></li>
+            <li><h3>Project Type:</h3><p>
+                <div class="btn-group" role="group" aria-label="btype">
+                    <button id="projtype0Btn" type="button" class="btn btn-default" onclick="projtype(0)">Pile</button>
+                    <button id="projtype1Btn" type="button" class="btn btn-default" onclick="projtype(1)">Tunnel</button>
+                    <button id="projtype2Btn" type="button" class="btn btn-default" onclick="projtype(2)">Beam</button>
+                    <button id="projtype3Btn" type="button" class="btn btn-default" onclick="projtype(3)">DWall</button>
+                </div>
+               </p>
+            </li>
+            <li><h3>Sensors Type Used:</h3>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox" >
+                            </span>
+                            <input type="text" value="BOTDR" class="form-control">
+                        </div><!-- /input-group -->
+                          <div class="input-group">
+                           <span class="input-group-addon">
+                               <input type="checkbox">
+                           </span>
+                          <input type="text" value="Digital Image Correlation" class="form-control">
+                        </div><!-- /input-group -->
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox">
+                            </span>
+                            <input type="text" value="Laser Scanning" class="form-control">
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox" >
+                            </span>
+                            <input type="text" value="FIBER" class="form-control">
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox">
+                            </span>
+                            <input type="text" value="Wireless Sensor" class="form-control">
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox">
+                            </span>
+                            <input type="text" value="UtterBerry Sensor" class="form-control">
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </li>
+        </ul>
+    </div>
+
+                @*<div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                    </ul>
+                </div>*@
+
+    <div  >
+        @*foreach (var item in Model)
+        {
+            @Html.RadioButtonFor(m => m.item, "Yes") @:Yes
+            @Html.RadioButtonFor(m => m.item, "No") @:No
+        }*@
+
+        @*<table data-url="~/Content/Data/data3.json" data-height="299" data-show-columns="true" data-id-field="id">
+            <thead>
+                <tr>
+                    <th data-field="state" data-radio="true"></th>
+                    <th data-field="name" data-switchable="false">Name</th>
+                    <th data-field="price">Price</th>
+                    <th data-field="column1">Columns1</th>
+                </tr>
+            </thead>
+        </table>*@
+    </div>
+
+    <div>
+              <h3>Project Location:</h3>
+                    <ul>
+                        <li><h4>Latitude:</h4>@Html.TextBoxFor(model => model.ProjectLocation.Latitude, new { id="lat"})</li>
+                        <li><h4>Longitude:</h4>@Html.TextBoxFor(model => model.ProjectLocation.Longitude, new { id="lng"})</li>
+                    </ul>
+    </div>
+    @*<canvas id="map-canvas" width="500" height="500"  style="border:1px solid #000000;"></canvas>*@
+    <div id="map-canvas"></div>
+    <p>
+        <input id="addLocButton" type="button" value="Update Loc" />
+    </p>        <a class="btn btn-large btn-primary" style="background-color:green" type="button" href="http://example.com">
+            <span class="glyphicon glyphicon-check" aria-hidden="true"></span>  Create</a>
+    <p>
+        <a class="btn btn-large btn-primary" style="background-color:red"   onclick="Create"><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>  Cancel </a>
+    <p>
+        The time is: <span id="uhr"></span>
+    </p>
+</div>

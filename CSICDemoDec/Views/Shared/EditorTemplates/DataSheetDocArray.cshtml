@@ -1,0 +1,45 @@
+﻿@Model CSICDemoDec.Models.DataSheetDocArray
+@{
+    ViewBag.Title = "DataSheetDocArray";
+}
+
+<h2>DataSheetDocArray</h2> 
+
+﻿@{
+    const string PageId = "mytasks";
+    string hiddenClass = ViewBag.Page.Equals(PageId) ? string.Empty : "preloaded";
+}
+<div id="@PageId" class="spapage @hiddenClass" data-page-title="My tasks">
+    <div id="mytasks-layout" class="container-fluid">
+        <div class="row" id="listCommands">
+            <button class="btn btn-primary btn-large" data-bind="enable: thingList().CheckedCount, click: longOperation">Process selected<span data-bind="    visible: thingList().CheckedCount"> (<span data-bind="    text: thingList().CheckedCount"></span>)</span></button>
+        </div>
+        <div class="row-fluid">
+            <div class="span3">
+                @*Sidebar content*@
+                <div id="list" data-bind="foreach: thingList().Things">
+                    <div class="row-fluid" data-bind="css: { selected: IsSelected }">
+                        <div class="span1"><input type="checkbox" class="listselector" data-bind="checked: IsChecked" /></div>
+                        <div class="span11 clickable" data-bind="click: $root.thingList().select">
+                            <h4 data-bind="text: Title"></h4>
+                            <div class="row-fluid">
+                                <div class="span6 muted">7.3.2012</div>
+                                <div class="span6" data-bind="visible: OperationPending"><span class="label label-info">processing...</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="span9" data-bind="with: thingList().SelectedItem">
+                @*Body content*@
+                <h2 data-bind="text: Title"></h2>
+                <p>Header data here... if we had any.</p>
+                <h4>History</h4>
+                <ul class="unstyled" data-bind="foreach: Operations">
+                    <li data-bind="text: $data"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

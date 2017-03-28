@@ -1,0 +1,4 @@
+﻿@model System.DateTime   
+
+ <h2>TEST ME</h2>
+@Html.TextBox("",System.DateTime.ParseExact(Model.ToString(), "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture).ToString("yyyy/MM/dd"), new { @class = "date" })

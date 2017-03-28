@@ -1,0 +1,682 @@
+@model   CSICDemoDec.Models.OpenProjectArray
+@{
+
+    ViewBag.Title = "Brugg Strain Wire Data Page";
+}
+@section featured
+{
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+            </hgroup>
+            <p>
+                It is featured section. That is named section in Layout template that defined by RenderSection
+            </p>
+        </div>
+    </section>
+}
+
+
+
+         @*<h2 class="western" style="margin-left: 1.91cm; page-break-before: always">
+             <a name="_Toc268106779"></a><a name="_Toc268106768"></a><a name="_Toc401064104"></a><a name="_Toc349828182"></a>
+             Brugg Strain Cable (BRUsens Strain V1)<span style="font-weight: normal">
+             </span><img src="DS%20-%20Cable01%20-%20Brugg%20Strain%20v1_html_m60ab6463.gif" align=LEFT hspace=12 width=255 height=173 border=0>
+         </h2>
+         <ol>
+             <li><h2 class="western">Description</h2>
+         </ol>
+         <dl>
+             <dl>
+                 <dd>
+                     <table width=395 border=1 bordercolor="#00000a" cellpadding=7 cellspacing=0 frame=HSIDES rules=ROWS>
+                         <col width=13>
+                         <col width=355>
+                         <tr>
+                             <td width=13 bgcolor="#d0cece">
+                                 <p class="western" style="margin-left: 4cm; margin-top: 0.28cm"><font face="Arial, serif"><font color="#00000a"><font size=2 style="font-size: 9pt"><span style="font-weight: normal">1</span></font></font></font></p>
+                             </td>
+                             <td width=355>
+                                 <p class="western" align=LEFT style="margin-left: 4cm; margin-top: 0.28cm">
+                                     <font face="Arial, serif">
+                                         <b>
+                                             <font color="#00000a">
+                                                 <font size=2 style="font-size: 9pt">
+                                                     LSZH
+                                                 </font>
+                                             </font><font color="#00000a">
+                                                 <font size=2 style="font-size: 9pt">
+                                                     (FRNC)
+                                                     outer sheath
+                                                 </font>
+                                             </font>
+                                         </b>
+                                     </font>
+                                 </p>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td width=13 bgcolor="#d0cece">
+                                 <p class="western" style="margin-left: 4cm; margin-top: 0.28cm"><font face="Arial, serif"><font color="#00000a"><font size=2 style="font-size: 9pt"><span style="font-weight: normal">2</span></font></font></font></p>
+                             </td>
+                             <td width=355>
+                                 <p class="western" align=LEFT style="margin-left: 4cm; margin-top: 0.28cm">
+                                     <font face="Arial, serif">
+                                         <font color="#00000a">
+                                             <font size=2 style="font-size: 9pt">
+                                                 <span style="font-weight: normal">
+                                                     Plastic
+                                                     protection layer with interlocking system
+                                                 </span>
+                                             </font>
+                                         </font>
+                                     </font>
+                                 </p>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td width=13 bgcolor="#d0cece">
+                                 <p class="western" style="margin-left: 4cm; margin-top: 0.28cm"><font face="Arial, serif"><font color="#00000a"><font size=2 style="font-size: 9pt"><span style="font-weight: normal">3</span></font></font></font></p>
+                             </td>
+                             <td width=355>
+                                 <p class="western" align=LEFT style="margin-left: 4cm; margin-top: 0.28cm">
+                                     <font face="Arial, serif">
+                                         <font color="#00000a">
+                                             <font size=2 style="font-size: 9pt">
+                                                 <span style="font-weight: normal">
+                                                     Multilayer
+                                                     buffer and strain transfer layer with interlocking system
+                                                 </span>
+                                             </font>
+                                         </font>
+                                     </font>
+                                 </p>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td width=13 bgcolor="#d0cece">
+                                 <p class="western" style="margin-left: 4cm; margin-top: 0.28cm"><font face="Arial, serif"><font color="#00000a"><font size=2 style="font-size: 9pt"><span style="font-weight: normal">4</span></font></font></font></p>
+                             </td>
+                             <td width=355>
+                                 <p class="western" style="margin-left: 4cm; margin-top: 0.28cm">
+                                     <font face="Arial, serif">
+                                         <b>
+                                             <font color="#00000a">
+                                                 <font size=2 style="font-size: 9pt">
+                                                     Single
+                                                     mode optical fibre with 250
+                                                 </font>
+                                             </font><font color="#00000a"><font size=2 style="font-size: 9pt">&micro;</font></font><font color="#00000a">
+                                                 <font size=2 style="font-size: 9pt">
+                                                     m
+                                                     primary coating
+                                                 </font>
+                                             </font>
+                                         </b>
+                                     </font>
+                                 </p>
+                             </td>
+                         </tr>
+                     </table>
+             </dl>
+         </dl>
+         <h2 class="western">
+             <br><br>
+         </h2>
+         <ol start=2>
+             <li><h2 class="western">Physical characteristics</h2>
+         </ol>
+         <center>
+             <table width=879 border=1 bordercolor="#00000a" cellpadding=7 cellspacing=0>
+                 <col width=71>
+                 <col width=52>
+                 <col width=51>
+                 <col width=107>
+                 <col width=71>
+                 <col width=72>
+                 <col width=71>
+                 <col width=6>
+                 <col width=74>
+                 <col width=49>
+                 <col width=98>
+                 <tr valign=TOP>
+                     <td rowspan=2 width=71 height=4>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Cable
+                                             construction
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td rowspan=2 width=52>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Number
+                                             of fibres
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td rowspan=2 width=51>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Cable
+                                             colour
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td rowspan=2 width=107>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font size=2>
+                                 <b>
+                                     <font color="#00000a">Cable diameter </font><font color="#00000a"><font face="Symbol, serif">&#61542;</font></font><font color="#00000a">
+                                         (mm)
+                                     </font>
+                                 </b>
+                             </font>
+                         </p>
+                     </td>
+                     <td rowspan=2 width=71>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Weight
+                                             (kg/km)
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td colspan=2 width=157>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm; margin-bottom: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Max.
+                                             pulling tension (N)
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             IEC
+                                             60794-1-2
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td width=6>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Min.
+                                             bending radius (mm)
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td rowspan=2 colspan=3 width=249>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Max.
+                                             crush resistance (N/cm)
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                 </tr>
+                 <tr valign=TOP>
+                     <td width=72>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Short
+                                             term
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td colspan=2 width=91>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Long
+                                             term
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td width=74>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Short
+                                             term
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td width=49>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Long
+                                             term
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                 </tr>
+                 <tr valign=TOP>
+                     <td width=71>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Tight
+                                             buffer
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td width=52>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span style="font-weight: normal">1</span></font></font></font>
+                         </p>
+                     </td>
+                     <td width=51>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Blue
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td width=107>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span style="font-weight: normal">3.2</span></font></font></font>
+                         </p>
+                     </td>
+                     <td width=71>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span style="font-weight: normal">7.5</span></font></font></font>
+                         </p>
+                     </td>
+                     <td width=72>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span style="font-weight: normal">10</span></font></font></font>
+                         </p>
+                     </td>
+                     <td colspan=2 width=91>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span style="font-weight: normal">27</span></font></font></font>
+                         </p>
+                     </td>
+                     <td width=74>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font size=2><b><font color="#00000a">64(20x</font><font color="#00000a"><font face="Symbol, serif">&#61472;&#61542;&#61481;</font></font></b></font>
+                         </p>
+                     </td>
+                     <td width=49>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font size=2><b><font color="#00000a">48(15x</font><font color="#00000a"><font face="Symbol, serif">&#61472;&#61542;&#61481;</font></font></b></font>
+                         </p>
+                     </td>
+                     <td width=98>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span style="font-weight: normal">150</span></font></font></font>
+                         </p>
+                     </td>
+                 </tr>
+             </table>
+         </center>
+         <h2 class="western">
+             <br><br>
+         </h2>
+         <ol start=3>
+             <li><h2 class="western">Fibre characteristics</h2>
+         </ol>
+         <center>
+             <table width=869 border=1 bordercolor="#00000a" cellpadding=7 cellspacing=0>
+                 <col width=159>
+                 <col width=218>
+                 <col width=118>
+                 <col width=167>
+                 <col width=135>
+                 <tr valign=TOP>
+                     <td width=159 height=21>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Fibre
+                                             type
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td width=218>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font color="#00000a">
+                                 <font face="Arial, serif">
+                                     <font size=2>
+                                         <b>
+                                             Mode
+                                             Field Diameter (
+                                         </b>
+                                     </font>
+                                 </font>
+                             </font><font color="#00000a"><font face="Arial, serif"><b>&micro;m)</b></font></font><font color="#00000a">
+                                 <font face="Arial, serif">
+                                     <font size=2>
+                                         <b>
+                                             @ 1550nm
+                                         </b>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td width=118>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Refractive
+                                             Index n @ 1550nm
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td width=167>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm; margin-bottom: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span lang="fr-FR">
+                                             <span style="font-weight: normal">
+                                                 Max.
+                                                 attenuation (dB/km)
+                                             </span>
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span lang="fr-FR">
+                                             <span style="font-weight: normal">
+                                                 @
+                                                 1550nm
+                                             </span>
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td width=135>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Numerical
+                                             aperture (-)
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                 </tr>
+                 <tr valign=TOP>
+                     <td width=159>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm; margin-bottom: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span lang="fr-FR"><span style="font-weight: normal">SMF</span></span></font></font></font>
+                         </p>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span lang="fr-FR">
+                                             <span style="font-weight: normal">
+                                                 ITU-T
+                                                 G.652.D &amp; G.657.A1&amp;A2
+                                             </span>
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td width=218>
+                         <p class="western" align=CENTER style="margin-left: 4cm">
+                             <font color="#00000a">
+                                 <font face="Arial, serif">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             9.4
+                                             &ndash; 10.4 &micro;m
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                         <p lang="fr-FR" class="western" align=CENTER style="margin-left: 4cm; font-weight: normal">
+                             <br>
+                         </p>
+                     </td>
+                     <td width=118>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span lang="fr-FR"><span style="font-weight: normal">1.467</span></span></font></font></font>
+                         </p>
+                     </td>
+                     <td width=167>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span lang="fr-FR"><span style="font-weight: normal">0.5</span></span></font></font></font>
+                         </p>
+                     </td>
+                     <td width=135>
+                         <p lang="fr-FR" class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <br>
+                         </p>
+                     </td>
+                 </tr>
+             </table>
+         </center>
+         <h2 lang="fr-FR" class="western">
+             <br><br>
+         </h2>
+         <ol start=4>
+             <li><h2 class="western"><span lang="fr-FR">Brillouin </span>parameters</h2>
+         </ol>
+         <center>
+             <table width=699 border=1 bordercolor="#00000a" cellpadding=7 cellspacing=0>
+                 <col width=127>
+                 <col width=127>
+                 <col width=165>
+                 <col width=222>
+                 <tr valign=TOP>
+                     <td width=127 height=22>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <br>
+                         </p>
+                     </td>
+                     <td width=127>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font size=2>
+                                     <b>
+                                         <font color="#00000a">C</font><font color="#00000a"><sub>&epsilon;</sub></font><font color="#00000a">
+                                             (Mhz/%)
+                                         </font>
+                                     </b>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td width=165>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font size=2>
+                                     <b>
+                                         <font color="#00000a">C</font><font color="#00000a">
+                                             <sub>
+                                                 T
+                                             </sub>
+                                         </font><font color="#00000a">(MHz/&deg;C)</font>
+                                     </b>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                     <td width=222>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm; margin-bottom: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             Central
+                                             Brillouin frequency (GHz)
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif">
+                                 <font color="#00000a">
+                                     <font size=2>
+                                         <span style="font-weight: normal">
+                                             @
+                                             1550nm @ 20 &ordm;C
+                                         </span>
+                                     </font>
+                                 </font>
+                             </font>
+                         </p>
+                     </td>
+                 </tr>
+                 <tr valign=TOP>
+                     <td width=127>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span lang="fr-FR"><span style="font-weight: normal">Manufacturer</span></span></font></font></font>
+                         </p>
+                     </td>
+                     <td width=127>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span lang="fr-FR"><span style="font-weight: normal">500</span></span></font></font></font>
+                         </p>
+                     </td>
+                     <td width=165>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span lang="fr-FR"><span style="font-weight: normal">1.1</span></span></font></font></font>
+                         </p>
+                     </td>
+                     <td width=222>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span lang="fr-FR"><span style="font-weight: normal">10.6</span></span></font></font></font>
+                         </p>
+                     </td>
+                 </tr>
+                 <tr valign=TOP>
+                     <td width=127>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <font face="Arial, serif"><font color="#00000a"><font size=2><span lang="fr-FR"><span style="font-weight: normal">CSIC</span></span></font></font></font>
+                         </p>
+                     </td>
+                     <td width=127>
+                         <p lang="fr-FR" class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <br>
+                         </p>
+                     </td>
+                     <td width=165>
+                         <p class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <br>
+                         </p>
+                     </td>
+                     <td width=222>
+                         <p lang="fr-FR" class="western" align=CENTER style="margin-left: 4cm; margin-top: 0.28cm">
+                             <br>
+                         </p>
+                     </td>
+                 </tr>
+             </table>
+         </center>
+         <p class="western" style="margin-top: 0.21cm">
+             <a name="_GoBack"></a>Preferred
+             supplier: Direct from manufacturer Brugg Cables			Price: ~ &pound;3.75-4.00
+             + VAT per meter
+         </p>*@

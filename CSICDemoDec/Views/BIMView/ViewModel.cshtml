@@ -1,0 +1,15 @@
+﻿@Model OpenModelItem
+
+@{
+    ViewBag.Title = Model;
+    ViewBag.RequireMain = "viewer";
+}
+
+<h2>@Model</h2>
+
+<canvas id="modelcanvas" style="width:600px;height:600px;"></canvas>
+<script type="text/javascript">
+    var ModelID = @Model.Name.ToString();
+    var XbimPath = @Model.URI.ToString();
+</script> 
+

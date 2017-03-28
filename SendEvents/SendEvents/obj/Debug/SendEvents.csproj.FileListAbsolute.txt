@@ -1,0 +1,10 @@
+C:\CurrentWork\CSIC_Database\CSICDemoDec\SendEvents\SendEvents\bin\Debug\SendEvents.exe.config
+C:\CurrentWork\CSIC_Database\CSICDemoDec\SendEvents\SendEvents\bin\Debug\SendEvents.exe
+C:\CurrentWork\CSIC_Database\CSICDemoDec\SendEvents\SendEvents\bin\Debug\SendEvents.pdb
+C:\CurrentWork\CSIC_Database\CSICDemoDec\SendEvents\SendEvents\bin\Debug\Microsoft.ServiceBus.dll
+C:\CurrentWork\CSIC_Database\CSICDemoDec\SendEvents\SendEvents\bin\Debug\Newtonsoft.Json.dll
+C:\CurrentWork\CSIC_Database\CSICDemoDec\SendEvents\SendEvents\bin\Debug\Microsoft.ServiceBus.xml
+C:\CurrentWork\CSIC_Database\CSICDemoDec\SendEvents\SendEvents\bin\Debug\Newtonsoft.Json.xml
+C:\CurrentWork\CSIC_Database\CSICDemoDec\SendEvents\SendEvents\obj\Debug\SendEvents.csprojResolveAssemblyReference.cache
+C:\CurrentWork\CSIC_Database\CSICDemoDec\SendEvents\SendEvents\obj\Debug\SendEvents.exe
+C:\CurrentWork\CSIC_Database\CSICDemoDec\SendEvents\SendEvents\obj\Debug\SendEvents.pdb

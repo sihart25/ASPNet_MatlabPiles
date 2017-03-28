@@ -1,0 +1,18 @@
+﻿ 
+@Model CSICDemoDec.Models.OpenModelArray
+    @{
+        ViewBag.Title = "Home Page";
+        ViewBag.RequireMain = "index";
+    }
+
+    <h2>@ViewBag.Title</h2>
+
+    Available Models:
+<h2>@Model.</h2>
+    <ul>
+        @foreach (CSICDemoDec.Models.OpenModelItem s in Model)
+        {
+            <li>@Html.ActionLink(s.Name, "ViewModel", "BIMView");@*new {  id=s.URI, Name Title})*@</li>
+        }
+    </ul>
+

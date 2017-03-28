@@ -1,0 +1,45 @@
+@model   CSICDemoDec.Models.OpenProjectArray
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="float-left">
+    <img src="~/Content/Images/CSIC_Logo.png" height="82" />
+    <h3> Innovation and Knowledge Centre funded by EPSRC and Technology Strategy Board</h3>
+</div>
+
+<section class="featured">
+    <div class="content-wrapper">
+        <hgroup class="title">
+            <h1>@ViewBag.Title</h1>
+            <h2>@ViewBag.Message</h2>
+        </hgroup>
+    </div>
+    <h3>We suggest the following:</h3>
+    <ol class="round">
+        <li class="one">
+            <h5>Getting Started</h5>
+            Create a New Project to Work on
+
+            @Html.ActionLink("network…", "network", "Vis");
+            @*<a href='@Url.Content( "~/Content/StaticHTML/network/index.cshtml" ) '>network</a>*@
+        </li>
+        <li class="two">
+            <h5>Open an timeline Document</h5>
+            @*@Html.ActionLink("graph2d...", "graph2d", "Vis");*@
+            <a href='@Url.Content( "~/Content/StaticHTML/graph2d/index.cshtml" )'>graph2d</a>
+        </li>
+        <li class="three">
+            <h5>Open an timeline Document</h5>
+            @*@Html.ActionLink("graph3d", "graph3d", "Vis");*@
+            <a href='@Url.Content( "~/Content/StaticHTML/graph3d/index.cshtml" )'>graph3d</a>
+        </li>
+        <li class="four">
+            <h5>Open an timeline Document</h5>
+            @*@Html.ActionLink("timeline", "timeline", "Vis");*@
+            <a href='@Url.Content( "~/Content/StaticHTML/timeline/index.cshtml" )'>timeline</a>
+
+        </li>
+    </ol>
+
+</section> 
+  

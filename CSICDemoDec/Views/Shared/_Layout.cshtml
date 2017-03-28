@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    <script language="C#">
+        @using CSICDemoDec.Utils;
+    </script>
+    <meta name="description" content="CSICDB DEMO Application" />
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style  type="text/css">
+        .navbar-collapse {
+            background-color: aliceblue; 
+            background-repeat: no-repeat;
+            filter: none;
+        }
+    </style> 
+</head>
+<body> 
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" id="MainNavbar">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li> 
+                <li>
+                    @Html.MenuLink("Dropdown", "Index", "Home2", new MvcHtmlString[]{
+                                      @Html.MenuLink("Link1", "Action1", "Controller1"),
+                                      @Html.MenuLink("Link2", "Action2", "Controller1"),
+                                      @Html.MenuLink("Link3", "Action3", "Controller1"),
+                                    })<li>
+</ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div> 
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <img src="~/Content/Images/Epsrc_Logo.png" alt="EPSRC Logo" height="82">
+                    <img src="~/Content/Images/TSB.jpg" alt="Technology Strategy Board Logo" height="82">
+                    <p>&copy;@DateTime.Now.Year.ToString() - Cambridge Centre for Smart Infrastructure and Construction</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

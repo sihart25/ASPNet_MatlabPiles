@@ -1,0 +1,43 @@
+﻿@model   CSICDemoDec.Models.Project 
+@{
+    ViewBag.Title = "Project Home Page";
+}
+<script language="javascript">
+</script>
+<div class="float-left">
+    <img src="~/Content/Images/CSIC_Logo.png" height="82" />
+    <h3> Innovation and Knowledge Centre funded by EPSRC and Technology Strategy Board</h3>
+</div>
+<section class="featured">
+    <div class="content-wrapper">
+        <hgroup class="title">
+            <h1>@ViewBag.Title.</h1>
+            <h2>@ViewBag.Message</h2>
+        </hgroup>
+        <p>
+    </div>
+ </section>
+    <div>
+
+        <h2>Here Messages</h2>
+        @{ Html.RenderPartial("_Alerts"); }
+        <p>
+            @Html.ActionLink("Add Item Message", "AddTimelineItem", "Project", new { name = "-1" }, null)
+            </p>
+        <p> 
+             @Html.ActionLink("View TimeLine", "Timeline", "Project", new { name = "-1" }, null)
+        </p>
+        <p>            @Html.ActionLink("Add Item TimeLine", "AddTimelineItem", "Project", new { name = "-1" }, null) 
+        </p>
+        <p>
+            @Html.ActionLink("Site Data", "Map", "Project", new { name = "-1" }, null)
+        </p>
+        <p>
+            @Html.ActionLink("BIM Data", "Index", "BIMView", new { name = "-1" }, null)
+        </p>
+
+        <p>
+            @Html.ActionLink("Real time test", "RealtimeSensor", "Project", new { name = "-1" }, null)
+        </p> 
+    </div>
+ 

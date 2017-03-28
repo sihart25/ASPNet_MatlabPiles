@@ -1,0 +1,22 @@
+﻿@{
+    var alerts = TempData.ContainsKey(CSICDemoDec.Utils.Alert.TempDataKey)
+                ? (List<CSICDemoDec.Utils.Alert>)TempData[CSICDemoDec.Utils.Alert.TempDataKey]
+                : new List<CSICDemoDec.Utils.Alert>();
+
+    if (alerts.Any())
+    {
+        <hr />
+    }
+
+    foreach (var alert in alerts)
+    {
+        var dismissableClass = alert.Dismissable ? "alert-dismissable" : null;
+        <div class="alert alert-@alert.AlertStyle @dismissableClass">
+            @if (alert.Dismissable)
+            {
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            }
+            @Html.Raw(alert.Message)
+        </div>
+    }
+}

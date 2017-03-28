@@ -1,0 +1,46 @@
+﻿@model CSICDemoDec.Models.TimeLineItemArray
+@{
+    ViewBag.Title = "Timeline"+Model._myProject.ProjectName;
+} 
+
+<!-- jQuery -->
+<script type="text/javascript" src="~/Scripts/jquery-2.1.1.js"></script>
+
+<!-- BEGIN TimelineJS -->
+<script type="text/javascript" src="~/Scripts/Timeline_js/js/storyjs-embed.js"></script>
+<script>
+    $(document).ready(function () {
+        createStoryJS({
+            type: 'timeline',
+            width: '800',
+            height: '600',
+            source:'@(string.Format("{0}://{1}{2}{3}",
+                             Request.Url.Scheme,
+                Request.Url.Host,(Request.Url.IsDefaultPort) ? "" : string.Format(":{0}", Request.Url.Port),
+                "//Content//Projects//example_json.json" ))',
+            embed_id: 'timeline-embed',
+            debug: true
+        });
+    }); 
+</script>
+<!-- END TimelineJS -->
+@*'<%: ResolveClientUrl("~/Content/Projects/example_json.json") %>'
+    
+
+
+     @section featured {
+
+        <section class="featured">
+            <div class="content-wrapper">
+                <hgroup class="title">
+                    <h1>@ViewBag.Title.</h1>
+                    <h2>@ViewBag.Message</h2>
+                </hgroup>
+            </div>
+        </section>
+    }*@  
+<!-- BEGIN Timeline Embed -->
+<div id="timeline-embed" style="width:800px;height:600px; border-style:solid;border-color:red;"></div>
+ 
+<!-- END Timeline Embed-->
+ 

@@ -1,0 +1,50 @@
+﻿@model  CSICDemoDec.Models.ProjectSensorArray
+@{
+    ViewBag.Title = "Sensor Installed List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section featured {
+
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}  
+    <table>
+    @foreach (@CSICDemoDec.Models.SensorItem  item in Model)
+    { 
+        <tr> 
+        <td>
+            
+            @item.SensorID.ToString()
+            <br />
+        </td> 
+                <td style="padding:0px 20px;">
+                @item.begintime.ToString() 
+                </td>
+                <td style="padding:0px 20px;">
+                @item.endtime.ToString() 
+                </td>
+                <td style="padding:0px 20px;">
+            @item.PosX.ToString() 
+                </td>
+                <td style="padding:0px 20px;">
+            @item.PosY.ToString() 
+                </td>
+                <td style="padding:0px 20px;">
+            @item.LastReading.ToString() 
+                </td>
+                <td style="padding:0px 20px;" >
+                    @Url.Action("GetGraph", "somecontroller",item.Readings)
+                </td>  
+        </tr> 
+    }
+    </table>
+
+
+     

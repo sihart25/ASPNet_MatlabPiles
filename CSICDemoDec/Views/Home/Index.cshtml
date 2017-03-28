@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Guest Home Page";
+}
+<div class="float-left">
+    <img src="~/Content/Images/CSIC_Logo.png" height="82" />
+    <h3> Innovation and Knowledge Centre funded by EPSRC and Technology Strategy Board</h3>
+</div>
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup> 
+            <p>
+                To Give you an Idea of what we are trying todo:
+            </p>
+            <p>
+                @Html.ActionLink("Upload Data", "Index", "Home")
+            </p>
+            <p>
+                @Html.ActionLink("View Data in Table", "Index", "Home")
+            </p>
+            <p>
+                @Html.ActionLink("View Graph", "Index", "MakeChart")
+            </p>
+            <p>
+                @Html.ActionLink("View Map", "Index", "Home")
+            </p>
+            <p>
+                @Html.ActionLink("View a Sensor Page", "Index", "Home")
+            </p>
+        </div>
+    </section>

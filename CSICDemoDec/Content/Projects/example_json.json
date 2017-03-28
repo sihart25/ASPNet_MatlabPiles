@@ -1,0 +1,45 @@
+ {
+    "timeline":
+    {
+        "headline":"Sh*t People Say",
+        "type":"default",
+		"text":"People say stuff",
+		"startDate":"2012,1,26",
+        "date": [
+            {
+                "startDate":"2012,1,26",
+				"endDate":"2012,1,27",
+                "headline":"Sh*t Politicians Say",
+                "text":"<p>In true political fashion, his character rattles off common jargon heard from people running for office.</p>",
+                "asset":
+                {
+                    "media":"http://youtu.be/u4XpeU9erbg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2012,1,10",
+                "headline":"Sh*t Nobody Says",
+                "text":"<p>Have you ever heard someone say “can I burn a copy of your Nickelback CD?” or “my Bazooka gum still has flavor!” Nobody says that.</p>",
+                "asset":
+                {
+                    "media":"http://youtu.be/f-x8t0JOnVw",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+	{
+                "startDate":"2012,1,18",
+                "headline":"Sh*t New Yorkers Say",
+                "text":"",
+                "asset":
+                {
+                    "media":"http://youtu.be/yRvJylbSg7o",
+                    "credit":"",
+                    "caption":"Directed and Edited by Matt Mayer, Produced by Seth Keim, Written by Eliot Glazer. Featuring Eliot and Ilana Glazer, who are siblings, not married."
+                }
+            }
+        ]
+    }
+}

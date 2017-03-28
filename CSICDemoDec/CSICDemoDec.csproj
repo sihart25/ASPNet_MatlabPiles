@@ -1,0 +1,1776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2835FDBA-96BA-4D5C-850D-A909BB12F4E3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSICDemoDec</RootNamespace>
+    <AssemblyName>MVC5Bootstrap-3-1-1-Less</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.Core, Version=1.9.30.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\BundleTransformer.Core.1.9.30\lib\net40\BundleTransformer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.Less, Version=1.9.31.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\BundleTransformer.Less.1.9.31\lib\net40\BundleTransformer.Less.dll</HintPath>
+    </Reference>
+    <Reference Include="EnsureThat">
+      <HintPath>..\packages\Ensure.That.2.0.0\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\EnsureThat.dll\EnsureThat.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Esent.Collections, Version=1.8.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ManagedEsent.1.8.3.2\lib\net40\Esent.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Esent.Interop, Version=1.8.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ManagedEsent.1.8.3.2\lib\net40\Esent.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="HelixToolkit.Wpf, Version=2013.1.36.1, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\HelixToolkit.2013.1.36.1\lib\NET45\HelixToolkit.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NPOI.1.2.5\lib\net40\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.Core, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c608b2a8cc9e4472, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\JavaScriptEngineSwitcher.Core.1.2.0\lib\net40\JavaScriptEngineSwitcher.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.Msie, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c608b2a8cc9e4472, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\JavaScriptEngineSwitcher.Msie.1.2.0\lib\net40\JavaScriptEngineSwitcher.Msie.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.1.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.1.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceBus, Version=2.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WindowsAzure.ServiceBus.2.5.3.0\lib\net40-full\Microsoft.ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.2.0.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="MsieJavaScriptEngine, Version=1.5.0.0, Culture=neutral, PublicKeyToken=a3a2846a37ac0d3e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MsieJavaScriptEngine.1.5.0\lib\net40\MsieJavaScriptEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="MyCouch.AspNet.Identity.Net45">
+      <HintPath>..\packages\MyCouch.AspNet.Identity.0.3.0\lib\net45\MyCouch.AspNet.Identity.Net45.dll</HintPath>
+    </Reference>
+    <Reference Include="MyCouch.Net45">
+      <HintPath>..\packages\MyCouch.2.0.0\lib\net45\MyCouch.Net45.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=1.2.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NPOI.1.2.5\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyTools, Version=2014.1.1.1, Culture=neutral, PublicKeyToken=ea0c9f2b460934d0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PropertyTools.Wpf.2013.1.25.1\lib\NET45\PropertyTools.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyTools.Wpf, Version=2014.1.1.1, Culture=neutral, PublicKeyToken=ea0c9f2b460934d0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PropertyTools.Wpf.2013.1.25.1\lib\NET45\PropertyTools.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.94.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.94.0\lib\net451\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.94.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.94.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.94.1\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.COBie, Version=2.4.1.28, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\xBIM3D.2.4.12\lib\net40\Xbim.COBie.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Common, Version=2.4.1.28, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\xBIM.2.4.13\lib\net40\Xbim.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Ifc.Extensions, Version=2.4.1.28, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\xBIM.2.4.13\lib\net40\Xbim.Ifc.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Ifc2x3, Version=2.4.1.28, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\xBIM.2.4.13\lib\net40\Xbim.Ifc2x3.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.IO, Version=2.4.1.28, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\xBIM.2.4.13\lib\net40\Xbim.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.ModelGeometry.Converter, Version=2.4.1.28, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\xBIM3D.2.4.12\lib\net40\Xbim.ModelGeometry.Converter.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.ModelGeometry.Scene, Version=2.4.1.28, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\xBIM3D.2.4.12\lib\net40\Xbim.ModelGeometry.Scene.dll</HintPath>
+    </Reference>
+    <Reference Include="Xbim.Presentation, Version=2.4.1.28, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\xBIM3D.2.4.12\lib\net40\Xbim.Presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\TestConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AddProjectController.cs" />
+    <Compile Include="Controllers\AnalysisController.cs" />
+    <Compile Include="Controllers\BIMViewController.cs" />
+    <Compile Include="Controllers\ChartJSController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\VisController.cs" />
+    <Compile Include="Controllers\WireController.cs" />
+    <Compile Include="DashHub.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ChartJSModel.cs" />
+    <Compile Include="Models\Data.cs" />
+    <Compile Include="Models\DataSheetDocModel.cs" />
+    <Compile Include="Models\FiberOpticSensorModel.cs" />
+    <Compile Include="Models\FileListArray.cs" />
+    <Compile Include="Models\hotspot.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\Map.cs" />
+    <Compile Include="Models\MatlabCode.cs" />
+    <Compile Include="Models\MessageArray.cs" />
+    <Compile Include="Models\OpenModel.cs" />
+    <Compile Include="Models\OpenProj.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\ProjectUser.cs" />
+    <Compile Include="Models\Readings.cs" />
+    <Compile Include="Models\Sensor.cs" />
+    <Compile Include="Models\Tag.cs" />
+    <Compile Include="Models\TagCloud.cs" />
+    <Compile Include="Models\TagCloudGenerationRules.cs" />
+    <Compile Include="Models\Timeline.cs" />
+    <Compile Include="Models\TimeLineItem.cs" />
+    <Compile Include="Models\Utils.cs" />
+    <Compile Include="Models\WebGLDataModel.cs" />
+    <Compile Include="Models\XbimSceneModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Utils\alerts.cs" />
+    <Compile Include="Utils\TimelineHelper.cs" />
+    <Compile Include="Utils\CONST.cs" />
+    <Compile Include="Utils\HasFileExtension.cs" />
+    <Compile Include="Utils\JsonDictionary.cs" />
+    <Compile Include="Utils\MenuLinkExtension.cs" />
+    <Compile Include="Utils\SortListFloorCeil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-datepicker.css" />
+    <Content Include="Content\bootstrap-datepicker3.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap-theme.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\simple-sidebar.css" />
+    <Content Include="Content\Data\fonts\droid\droid_sans_bold.typeface.js" />
+    <Content Include="Content\Data\fonts\droid\droid_sans_mono_regular.typeface.js" />
+    <Content Include="Content\Data\fonts\droid\droid_sans_regular.typeface.js" />
+    <Content Include="Content\Data\fonts\droid\droid_serif_bold.typeface.js" />
+    <Content Include="Content\Data\fonts\droid\droid_serif_regular.typeface.js" />
+    <Content Include="Content\Data\fonts\droid\README.txt" />
+    <Content Include="Content\Data\fonts\gentilis_bold.typeface.js" />
+    <Content Include="Content\Data\fonts\gentilis_regular.typeface.js" />
+    <Content Include="Content\Data\fonts\helvetiker_bold.typeface.js" />
+    <Content Include="Content\Data\fonts\helvetiker_regular.typeface.js" />
+    <Content Include="Content\Data\fonts\optimer_bold.typeface.js" />
+    <Content Include="Content\Data\fonts\optimer_regular.typeface.js" />
+    <Content Include="Content\Data\PostOfficeOverlaid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\PostOfficeOverlaid_Thumb1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\TimeLine_example1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Images\abs-pos-close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\abs-pos-home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\abs-pos-signin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\abs-pos-top.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\accent.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\breadcrumb_divider.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\btn_submit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\btn_submit_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\btn_view_site.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\bullet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\CSIC_Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Epsrc_logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\header_bg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\header_shadow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\heroAccent.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_add_user.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_alert_error.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_alert_info.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_alert_success.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_alert_warning.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_audio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_categories.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_edit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_edit_article.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_folder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_jump_back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_logout.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_new_article.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_photo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_profile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_search.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_security.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_settings.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_tags.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_trash.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_user.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_video.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\icn_view_users.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\man silhouette.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\module_footer_bg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\orderedList0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\orderedList1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\orderedList2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\orderedList3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\orderedList4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\orderedList5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\orderedList6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\orderedList7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\orderedList8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\orderedList9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\post_message.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\secondary_bar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\secondary_bar_shadow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\sidebar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\sidebar_divider.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\sidebar_shadow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\table_sorter_header.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\TechStratBoard_logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\TSB.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\info.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\blue-disc60x60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\blue-pin-old.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\blue-pin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\blue-pin35x35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\blue-pin40x40.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\blue-pin50x50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\green-disc60x60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\green-pin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\green-pin50x50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\grey-pin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\orange-pin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\orange-pin50x50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\pink-pin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\pink-pin50x50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\purple-pin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\red-disc60x60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\red-pin130x100.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\silver-disc60x60.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\ui\pins\yellow-pin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\UniLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\Dir_Structure.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Admin\Admin_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Admin\Forms\Forms_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Admin\GeneralPaperwork\GeneralPaperwork_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Analysis\Analysis-Excel\Analysis-Excel_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Analysis\Analysis-FEM\Analysis-FEM_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Analysis\Analysis-MatLab\Analysis-MatLab_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Analysis\Analysis_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Correspondence\Correspondence_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Correspondence\Emails\Emails_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Correspondence\ScannedMaterials\ScannedMaterials_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Data\Data-ExternalData\Data-ExternalData_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Data\Data-RawData\Data-RawData_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Data\DataBaseDetails-LOCKED\DataBaseDetails-LOCKED_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Data\Data_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Drawings\Drawings-Construction\Drawings-Construction_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Drawings\Drawings-Design\Drawings-Design_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Drawings\Drawings_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Finance\Finance_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Finance\Funding_Financing\Funding_Financing_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Finance\ProjectCosting\ProjectCosting_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Finance\TimeSheets\TimeSheets_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\GeneralSiteInformation\Drawings\Drawings-Current\Drawings-Current_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\GeneralSiteInformation\Drawings\Drawings-Historic\Drawings-Historic_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\GeneralSiteInformation\Drawings\Drawings_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\GeneralSiteInformation\GeneralSiteInformation_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\GeneralSiteInformation\Maps\Maps-Current\Maps-Current_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\GeneralSiteInformation\Maps\Maps-Historic\Maps-Historic_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\GeneralSiteInformation\Maps\Maps_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\GeneralSiteInformation\SiteData\SiteData-Current\SiteData-Current_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\GeneralSiteInformation\SiteData\SiteData-Historic\SiteData-Historic_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\GeneralSiteInformation\SiteData\SiteData_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Main_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Other\Other_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output-Media\Output-Media-Draft\Output-Media-Draft_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output-Media\Output-Media-Published\Output-Media-Published_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output-Media\Output-Media_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output-Papers\Output-Papers-Draft\Output-Papers-Draft_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output-Papers\Output-Papers-Published\Output-Papers-Published_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output-Papers\Output-Papers_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output-Presentations\Output-Presentations-Draft\Output-Presentations-Draft_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output-Presentations\Output-Presentations-Published\Output-Presentations-Published_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output-Presentations\Output-Presentations_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output-Reports\Output-Reports-Draft\Output-Reports-Draft_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output-Reports\Output-Reports-Published\Output-Reports-Published_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output-Reports\Output-Reports_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\Output\Output_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\SiteWorks\SiteWorks-ConstructionSequencing\SiteWorks-ConstructionSequencing_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\SiteWorks\SiteWorks-Design\SiteWorks-Design_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\SiteWorks\SiteWorks-MethodStatements\SiteWorks-MethodStatements_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\SiteWorks\SiteWorks-Photos\SiteWorks-Photos_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\Main\SiteWorks\SiteWorks_files.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Projects\NewProjV1\NewProjV1_Dir_Structure.xml" />
+    <Content Include="Content\Data\Test\testxml.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\navbar.less" />
+    <Content Include="Content\Site.less" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\wells.less" />
+    <Content Include="Content\bootstrap\utilities.less" />
+    <Content Include="Content\bootstrap\type.less" />
+    <Content Include="Content\bootstrap\tooltip.less" />
+    <Content Include="Content\bootstrap\thumbnails.less" />
+    <Content Include="Content\bootstrap\theme.less" />
+    <Content Include="Content\bootstrap\tables.less" />
+    <Content Include="Content\bootstrap\scaffolding.less" />
+    <Content Include="Content\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\responsive-embed.less" />
+    <Content Include="Content\bootstrap\progress-bars.less" />
+    <Content Include="Content\bootstrap\print.less" />
+    <Content Include="Content\bootstrap\popovers.less" />
+    <Content Include="Content\bootstrap\panels.less" />
+    <Content Include="Content\bootstrap\pagination.less" />
+    <Content Include="Content\bootstrap\pager.less" />
+    <Content Include="Content\bootstrap\normalize.less" />
+    <Content Include="Content\bootstrap\navs.less" />
+    <Content Include="Content\bootstrap\modals.less" />
+    <Content Include="Content\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="Content\bootstrap\mixins\text-overflow.less" />
+    <Content Include="Content\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="Content\bootstrap\mixins\table-row.less" />
+    <Content Include="Content\bootstrap\mixins\tab-focus.less" />
+    <Content Include="Content\bootstrap\mixins\size.less" />
+    <Content Include="Content\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="Content\bootstrap\mixins\resize.less" />
+    <Content Include="Content\bootstrap\mixins\reset-filter.less" />
+    <Content Include="Content\bootstrap\mixins\progress-bar.less" />
+    <Content Include="Content\bootstrap\mixins\panels.less" />
+    <Content Include="Content\bootstrap\mixins\pagination.less" />
+    <Content Include="Content\bootstrap\mixins\opacity.less" />
+    <Content Include="Content\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="Content\bootstrap\mixins\nav-divider.less" />
+    <Content Include="Content\bootstrap\mixins\list-group.less" />
+    <Content Include="Content\bootstrap\mixins\labels.less" />
+    <Content Include="Content\bootstrap\mixins\image.less" />
+    <Content Include="Content\bootstrap\mixins\hide-text.less" />
+    <Content Include="Content\bootstrap\mixins\grid-framework.less" />
+    <Content Include="Content\bootstrap\mixins\grid.less" />
+    <Content Include="Content\bootstrap\mixins\gradients.less" />
+    <Content Include="Content\bootstrap\mixins\forms.less" />
+    <Content Include="Content\bootstrap\mixins\clearfix.less" />
+    <Content Include="Content\bootstrap\mixins\center-block.less" />
+    <Content Include="Content\bootstrap\mixins\buttons.less" />
+    <Content Include="Content\bootstrap\mixins\border-radius.less" />
+    <Content Include="Content\bootstrap\mixins\background-variant.less" />
+    <Content Include="Content\bootstrap\mixins\alerts.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="Content\bootstrap\media.less" />
+    <Content Include="Content\bootstrap\list-group.less" />
+    <Content Include="Content\bootstrap\labels.less" />
+    <Content Include="Content\bootstrap\jumbotron.less" />
+    <Content Include="Content\bootstrap\input-groups.less" />
+    <Content Include="Content\bootstrap\grid.less" />
+    <Content Include="Content\bootstrap\glyphicons.less" />
+    <Content Include="Content\bootstrap\forms.less" />
+    <Content Include="Content\bootstrap\dropdowns.less" />
+    <Content Include="Content\bootstrap\component-animations.less" />
+    <Content Include="Content\bootstrap\code.less" />
+    <Content Include="Content\bootstrap\close.less" />
+    <Content Include="Content\bootstrap\carousel.less" />
+    <Content Include="Content\bootstrap\buttons.less" />
+    <Content Include="Content\bootstrap\button-groups.less" />
+    <Content Include="Content\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\bootstrap.less" />
+    <Content Include="Content\bootstrap\badges.less" />
+    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Scripts\ai.js" />
+    <Content Include="Scripts\ai.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.1.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.1.2.min.js" />
+    <Content Include="Scripts\Vis_js\img\network\acceptDeleteIcon.png" />
+    <Content Include="Scripts\Vis_js\img\network\addNodeIcon.png" />
+    <Content Include="Scripts\Vis_js\img\network\backIcon.png" />
+    <Content Include="Scripts\Vis_js\img\network\connectIcon.png" />
+    <Content Include="Scripts\Vis_js\img\network\cross.png" />
+    <Content Include="Scripts\Vis_js\img\network\cross2.png" />
+    <Content Include="Scripts\Vis_js\img\network\deleteIcon.png" />
+    <Content Include="Scripts\Vis_js\img\network\downArrow.png" />
+    <Content Include="Scripts\Vis_js\img\network\editIcon.png" />
+    <Content Include="Scripts\Vis_js\img\network\leftArrow.png" />
+    <Content Include="Scripts\Vis_js\img\network\minus.png" />
+    <Content Include="Scripts\Vis_js\img\network\plus.png" />
+    <Content Include="Scripts\Vis_js\img\network\rightArrow.png" />
+    <Content Include="Scripts\Vis_js\img\network\upArrow.png" />
+    <Content Include="Scripts\Vis_js\img\network\zoomExtends.png" />
+    <Content Include="Scripts\Vis_js\img\timeline\delete.png" />
+    <Content Include="Scripts\Vis_js\vis.css" />
+    <Content Include="Scripts\Vis_js\vis.js" />
+    <Content Include="Scripts\Vis_js\vis.min.css" />
+    <Content Include="Scripts\Vis_js\vis.min.js" />
+    <Content Include="Scripts\Vis_js\vis.map" />
+    <Content Include="Views\Vis\graph2d\01_basic.html" />
+    <Content Include="Views\Vis\graph2d\02_bars.html" />
+    <Content Include="Views\Vis\graph2d\03_groups.html" />
+    <Content Include="Views\Vis\graph2d\04_rightAxis.html" />
+    <Content Include="Views\Vis\graph2d\05_bothAxis.html" />
+    <Content Include="Views\Vis\graph2d\06_interpolation.html" />
+    <Content Include="Views\Vis\graph2d\07_scrollingAndSorting.html" />
+    <Content Include="Views\Vis\graph2d\08_performance.html" />
+    <Content Include="Views\Vis\graph2d\09_external_legend.html" />
+    <Content Include="Views\Vis\graph2d\10_barsSideBySide.html" />
+    <Content Include="Views\Vis\graph2d\11_barsSideBySideGroups.html" />
+    <Content Include="Views\Vis\graph2d\12_customRange.html" />
+    <Content Include="Views\Vis\graph2d\13_localization.html" />
+    <Content Include="Views\Vis\graph2d\14_toggleGroups.html" />
+    <Content Include="Views\Vis\graph2d\15_streaming_data.html" />
+    <Content Include="Views\Vis\graph2d\16_bothAxis_titles.html" />
+    <Content Include="Views\Vis\graph2d\17_dynamicStyling.html" />
+    <Content Include="Views\Vis\graph2d\18_scatterplot.html" />
+    <Content Include="Views\Vis\graph2d\default.css" />
+    <None Include="Views\Vis\graph2d\index.cshtml" />
+    <Content Include="Views\Vis\graph3d\default.css" />
+    <Content Include="Views\Vis\graph3d\example01_basis.html" />
+    <Content Include="Views\Vis\graph3d\example02_camera.html" />
+    <Content Include="Views\Vis\graph3d\example03_filter.html" />
+    <Content Include="Views\Vis\graph3d\example04_animate.html" />
+    <Content Include="Views\Vis\graph3d\example05_line.html" />
+    <Content Include="Views\Vis\graph3d\example06_moving_dots.html" />
+    <Content Include="Views\Vis\graph3d\example07_dot_cloud_colors.html" />
+    <Content Include="Views\Vis\graph3d\example08_dot_cloud_size.html" />
+    <Content Include="Views\Vis\graph3d\example09_mobile.html" />
+    <Content Include="Views\Vis\graph3d\example10_styles.html" />
+    <Content Include="Views\Vis\graph3d\example11_tooltips.html" />
+    <Content Include="Views\Vis\graph3d\example12_ticks.html" />
+    <Content Include="Views\Vis\graph3d\index.html" />
+    <Content Include="Views\Vis\graph3d\playground\csv2array.js" />
+    <Content Include="Views\Vis\graph3d\playground\csv2datatable.html" />
+    <Content Include="Views\Vis\graph3d\playground\datasource.html" />
+    <Content Include="Views\Vis\graph3d\playground\index.html" />
+    <Content Include="Views\Vis\graph3d\playground\playground.css" />
+    <Content Include="Views\Vis\graph3d\playground\playground.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-apollo.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-css.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-hs.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-lisp.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-lua.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-ml.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-proto.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-scala.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-sql.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-vb.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-vhdl.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-wiki.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\lang-yaml.js" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\prettify.css" />
+    <Content Include="Views\Vis\graph3d\playground\prettify\prettify.js" />
+    <Content Include="Views\Vis\network\01_basic_usage.html" />
+    <Content Include="Views\Vis\network\02_random_nodes.html" />
+    <Content Include="Views\Vis\network\03_images.html" />
+    <Content Include="Views\Vis\network\04_shapes.html" />
+    <Content Include="Views\Vis\network\05_social_network.html" />
+    <Content Include="Views\Vis\network\06_groups.html" />
+    <Content Include="Views\Vis\network\07_selections.html" />
+    <Content Include="Views\Vis\network\08_mobile_friendly.html" />
+    <Content Include="Views\Vis\network\09_sizing.html" />
+    <Content Include="Views\Vis\network\10_multiline_text.html" />
+    <Content Include="Views\Vis\network\11_custom_style.html" />
+    <Content Include="Views\Vis\network\12_scalable_images.html" />
+    <Content Include="Views\Vis\network\13_dashed_lines.html" />
+    <Content Include="Views\Vis\network\14_dot_language.html" />
+    <Content Include="Views\Vis\network\15_dot_language_playground.html" />
+    <Content Include="Views\Vis\network\16_dynamic_data.html" />
+    <Content Include="Views\Vis\network\17_network_info.html" />
+    <Content Include="Views\Vis\network\18_fully_random_nodes_clustering.html" />
+    <Content Include="Views\Vis\network\19_scale_free_graph_clustering.html" />
+    <Content Include="Views\Vis\network\20_navigation.html" />
+    <Content Include="Views\Vis\network\21_data_manipulation.html" />
+    <Content Include="Views\Vis\network\22_les_miserables.html" />
+    <Content Include="Views\Vis\network\23_hierarchical_layout.html" />
+    <Content Include="Views\Vis\network\24_hierarchical_layout_userdefined.html" />
+    <Content Include="Views\Vis\network\25_physics_configuration.html" />
+    <Content Include="Views\Vis\network\26_staticSmoothCurves.html" />
+    <Content Include="Views\Vis\network\27_world_cup_network.html" />
+    <Content Include="Views\Vis\network\28_world_cup_network_performance.html" />
+    <Content Include="Views\Vis\network\29_neighbourhood_highlight.html" />
+    <Content Include="Views\Vis\network\30_importing_from_gephi.html" />
+    <Content Include="Views\Vis\network\31_localization.html" />
+    <Content Include="Views\Vis\network\32_hierarchicaLayoutMethods.html" />
+    <Content Include="Views\Vis\network\33_animation.html" />
+    <Content Include="Views\Vis\network\34_circular_images.html" />
+    <Content Include="Views\Vis\network\35_label_stroke.html" />
+    <Content Include="Views\Vis\network\36_HTML_in_Nodes.html" />
+    <Content Include="Views\Vis\network\37_label_alignment.html" />
+    <Content Include="Views\Vis\network\graphviz\data\fsm.gv.txt" />
+    <Content Include="Views\Vis\network\graphviz\data\hello.gv.txt" />
+    <Content Include="Views\Vis\network\graphviz\data\process.gv.txt" />
+    <Content Include="Views\Vis\network\graphviz\data\siblings.gv.txt" />
+    <Content Include="Views\Vis\network\graphviz\data\softmaint.gv.txt" />
+    <Content Include="Views\Vis\network\graphviz\data\traffic_lights.gv.txt" />
+    <Content Include="Views\Vis\network\graphviz\data\transparency.gv.txt" />
+    <Content Include="Views\Vis\network\graphviz\data\twopi2.gv.txt" />
+    <Content Include="Views\Vis\network\graphviz\data\unix.gv.txt" />
+    <Content Include="Views\Vis\network\graphviz\data\world.gv.txt" />
+    <Content Include="Views\Vis\network\graphviz\graphviz_gallery.html" />
+    <Content Include="Views\Vis\network\graphviz\screenshots\fsm.png" />
+    <Content Include="Views\Vis\network\graphviz\screenshots\hello.png" />
+    <Content Include="Views\Vis\network\graphviz\screenshots\softmaint.png" />
+    <Content Include="Views\Vis\network\graphviz\screenshots\traffic_lights.png" />
+    <Content Include="Views\Vis\network\img\indonesia\1.png" />
+    <Content Include="Views\Vis\network\img\indonesia\10.png" />
+    <Content Include="Views\Vis\network\img\indonesia\11.png" />
+    <Content Include="Views\Vis\network\img\indonesia\12.png" />
+    <Content Include="Views\Vis\network\img\indonesia\13.png" />
+    <Content Include="Views\Vis\network\img\indonesia\14.png" />
+    <Content Include="Views\Vis\network\img\indonesia\2.png" />
+    <Content Include="Views\Vis\network\img\indonesia\3.png" />
+    <Content Include="Views\Vis\network\img\indonesia\4.png" />
+    <Content Include="Views\Vis\network\img\indonesia\5.png" />
+    <Content Include="Views\Vis\network\img\indonesia\6.png" />
+    <Content Include="Views\Vis\network\img\indonesia\7.png" />
+    <Content Include="Views\Vis\network\img\indonesia\8.png" />
+    <Content Include="Views\Vis\network\img\indonesia\9.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Hardware-Fax-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Hardware-Laptop-1-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Hardware-Mobile-Phone-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Hardware-My-Computer-3-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Hardware-My-PDA-02-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Hardware-My-PDA-04-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Hardware-My-PDA-05-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Hardware-My-Phone-Picture-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Hardware-Printer-Blue-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\license.txt" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Misc-Scanner-default-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Network-Drive-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Network-Internet-Connection-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\Network-Pipe-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\System-Firewall-2-icon.png" />
+    <Content Include="Views\Vis\network\img\refresh-cl\System-Globe-icon.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\Document-icon24.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\Document-icon32.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\Document-icon48.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\Email-icon24.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\Email-icon32.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\Email-icon48.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\Folder-icon24.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\Folder-icon32.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\Folder-icon48.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\Folder-icon64.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\license.txt" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\Smiley-Angry-icon.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\Smiley-Grin-icon.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\User-Administrator-Blue-icon.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\User-Administrator-Green-icon.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\User-Coat-Blue-icon.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\User-Coat-Green-icon.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\User-Coat-Red-icon.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\User-Executive-Green-icon.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\User-Preppy-Blue-icon.png" />
+    <Content Include="Views\Vis\network\img\soft-scraps-icons\User-Preppy-Red-icon.png" />
+    <Content Include="Views\Vis\network\index.html" />
+    <Content Include="Views\Vis\timeline\01_basic.html" />
+    <Content Include="Views\Vis\timeline\02_interactive.html" />
+    <Content Include="Views\Vis\timeline\03_performance.html" />
+    <Content Include="Views\Vis\timeline\04_html_data.html" />
+    <Content Include="Views\Vis\timeline\05_groups.html" />
+    <Content Include="Views\Vis\timeline\06_event_listeners.html" />
+    <Content Include="Views\Vis\timeline\07_custom_time_bar.html" />
+    <Content Include="Views\Vis\timeline\08_edit_items.html" />
+    <Content Include="Views\Vis\timeline\09_order_groups.html" />
+    <Content Include="Views\Vis\timeline\10_limit_move_and_zoom.html" />
+    <Content Include="Views\Vis\timeline\11_points.html" />
+    <Content Include="Views\Vis\timeline\12_custom_styling.html" />
+    <Content Include="Views\Vis\timeline\13_past_and_future.html" />
+    <Content Include="Views\Vis\timeline\14_group_performance.html" />
+    <Content Include="Views\Vis\timeline\15_item_class_names.html" />
+    <Content Include="Views\Vis\timeline\16_navigation_menu.html" />
+    <Content Include="Views\Vis\timeline\17_data_serialization.html" />
+    <Content Include="Views\Vis\timeline\18_range_overflow.html" />
+    <Content Include="Views\Vis\timeline\19_localization.html" />
+    <Content Include="Views\Vis\timeline\20_click_to_use.html" />
+    <Content Include="Views\Vis\timeline\21_set_selection.html" />
+    <Content Include="Views\Vis\timeline\22_window_adjustment.html" />
+    <Content Include="Views\Vis\timeline\23_data_attributes.html" />
+    <Content Include="Views\Vis\timeline\24_all_data_attributes.html" />
+    <Content Include="Views\Vis\timeline\25_background_areas.html" />
+    <Content Include="Views\Vis\timeline\26_external_data.html" />
+    <Content Include="Views\Vis\timeline\27_templates.html" />
+    <Content Include="Views\Vis\timeline\29_hiding_times.html" />
+    <Content Include="Views\Vis\timeline\30_subgroups.html" />
+    <Content Include="Views\Vis\timeline\31_background_areas_with_groups.html" />
+    <Content Include="Views\Vis\timeline\32_grid_styling.html" />
+    <Content Include="Views\Vis\timeline\33_custom_snapping.html" />
+    <Content Include="Views\Vis\timeline\img\attachment-icon.png" />
+    <Content Include="Views\Vis\timeline\img\blog-post-edit-icon.png" />
+    <Content Include="Views\Vis\timeline\img\comments-icon.png" />
+    <Content Include="Views\Vis\timeline\img\community-users-icon.png" />
+    <Content Include="Views\Vis\timeline\img\Hardware-Mobile-Phone-icon.png" />
+    <Content Include="Views\Vis\timeline\img\license.txt" />
+    <Content Include="Views\Vis\timeline\img\license_aesthetica-2.txt" />
+    <Content Include="Views\Vis\timeline\img\license_refresh-cl.txt" />
+    <Content Include="Views\Vis\timeline\img\mail-icon.png" />
+    <Content Include="Views\Vis\timeline\img\notes-edit-icon.png" />
+    <Content Include="Views\Vis\timeline\img\product-icon.png" />
+    <Content Include="Views\Vis\timeline\img\truck-icon.png" />
+    <Content Include="Views\Vis\timeline\index.html" />
+    <Content Include="Views\Vis\timeline\requirejs\requirejs_example.html" />
+    <Content Include="Views\Vis\timeline\requirejs\scripts\main.js" />
+    <Content Include="Views\Vis\timeline\requirejs\scripts\require.js" />
+    <Content Include="x64\TKBO.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKBool.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKBRep.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKernel.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKG2d.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKG3d.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKGeomAlgo.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKGeomBase.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKMath.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKMesh.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKOffset.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKPrim.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKShHealing.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\TKTopAlgo.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\Xbim.ModelGeometry.OCC.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKBO.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKBool.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKBRep.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKernel.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKG2d.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKG3d.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKGeomAlgo.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKGeomBase.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKMath.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKMesh.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKOffset.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKPrim.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKShHealing.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\TKTopAlgo.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\Xbim.ModelGeometry.OCC.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ApplicationInsights.config" />
+    <None Include="BundleTransformer.Configuration.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Scripts\animationTimer.js" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\css\bootstrap-theme.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\Data\A1_00000014.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\A1_00000015.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\baseline\00000631.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\baseline\00000632.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\baseline\00000633.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\baseline\00000634.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\baseline\00000634_BS.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\baseline\00000635.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\baseline\00000636.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\baseline\00000637.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\baseline\00000638.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\baseline\00000639.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\files\inconsolata.woff" />
+    <Content Include="Content\Data\fonts\droid\NOTICE" />
+    <Content Include="Content\Data\fonts\LICENSE" />
+    <Content Include="Content\Data\TimelineJS Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\data3.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Data\data2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\Chart_js\.gitignore" />
+    <Content Include="Scripts\Chart_js\bower.json" />
+    <Content Include="Scripts\Chart_js\Legend\LICENSE" />
+    <Content Include="Scripts\Chart_js\Legend\README.md" />
+    <Content Include="Scripts\Chart_js\LICENSE.md" />
+    <Content Include="Scripts\Chart_js\package.json" />
+    <Content Include="Scripts\Chart_js\README.md" />
+    <Content Include="Content\Projects\example_json.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\Chart_js\Chart.js" />
+    <Content Include="Scripts\Chart_js\Chart.min.js" />
+    <Content Include="Scripts\Chart_js\gulpfile.js" />
+    <Content Include="Scripts\Chart_js\legend.js" />
+    <Content Include="Scripts\Chart_js\Legend\css\demo.css" />
+    <Content Include="Scripts\Chart_js\Legend\index.html" />
+    <Content Include="Scripts\Chart_js\Legend\src\demo.js" />
+    <Content Include="Scripts\Chart_js\Legend\src\legend.js" />
+    <Content Include="Scripts\Chart_js\Legend\vendor\Chart.js" />
+    <Content Include="Scripts\gameEngine.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\kinetic-v4.4.3.js" />
+    <Content Include="Scripts\kinetic-v4.4.3.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.az.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.cy.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.da.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.de.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.el.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.es.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.et.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fa.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.gl.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.he.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.id.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.is.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.it.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kk.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nl-BE.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.no.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.th.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ua.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.vi.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\pan.js" />
+    <Content Include="Scripts\polygon.js" />
+    <Content Include="Scripts\progressbar.js" />
+    <Content Include="Scripts\requestNextAnimationFrame.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\roundedRectangle.js" />
+    <Content Include="Scripts\shapes.js" />
+    <Content Include="Scripts\slider.js" />
+    <Content Include="Scripts\sprites.js" />
+    <Content Include="Scripts\stopwatch.js" />
+    <Content Include="Scripts\Three\AudioObject.js" />
+    <Content Include="Scripts\Three\BlendCharacter.js" />
+    <Content Include="Scripts\Three\BlendCharacterGui.js" />
+    <Content Include="Scripts\Three\cameras\CombinedCamera.js" />
+    <Content Include="Scripts\Three\Car.js" />
+    <Content Include="Scripts\Three\Cloth.js" />
+    <Content Include="Scripts\Three\controls\DeviceOrientationControls.js" />
+    <Content Include="Scripts\Three\controls\EditorControls.js" />
+    <Content Include="Scripts\Three\controls\FirstPersonControls.js" />
+    <Content Include="Scripts\Three\controls\FlyControls.js" />
+    <Content Include="Scripts\Three\controls\OculusControls.js" />
+    <Content Include="Scripts\Three\controls\OrbitControls.js" />
+    <Content Include="Scripts\Three\controls\OrthographicTrackballControls.js" />
+    <Content Include="Scripts\Three\controls\PointerLockControls.js" />
+    <Content Include="Scripts\Three\controls\TrackballControls.js" />
+    <Content Include="Scripts\Three\controls\TransformControls.js" />
+    <Content Include="Scripts\Three\controls\VRControls.js" />
+    <Content Include="Scripts\Three\crossfade\gui.js" />
+    <Content Include="Scripts\Three\crossfade\scenes.js" />
+    <Content Include="Scripts\Three\crossfade\transition.js" />
+    <Content Include="Scripts\Three\CurveExtras.js" />
+    <Content Include="Scripts\Three\curves\NURBSCurve.js" />
+    <Content Include="Scripts\Three\curves\NURBSSurface.js" />
+    <Content Include="Scripts\Three\curves\NURBSUtils.js" />
+    <Content Include="Scripts\Three\Detector.js" />
+    <Content Include="Scripts\Three\effects\AnaglyphEffect.js" />
+    <Content Include="Scripts\Three\effects\AsciiEffect.js" />
+    <Content Include="Scripts\Three\effects\OculusRiftEffect.js" />
+    <Content Include="Scripts\Three\effects\ParallaxBarrierEffect.js" />
+    <Content Include="Scripts\Three\effects\StereoEffect.js" />
+    <Content Include="Scripts\Three\effects\VREffect.js" />
+    <Content Include="Scripts\Three\exporters\BufferGeometryExporter.js" />
+    <Content Include="Scripts\Three\exporters\GeometryExporter.js" />
+    <Content Include="Scripts\Three\exporters\HTMLExporter.js" />
+    <Content Include="Scripts\Three\exporters\MaterialExporter.js" />
+    <Content Include="Scripts\Three\exporters\ObjectExporter.js" />
+    <Content Include="Scripts\Three\exporters\OBJExporter.js" />
+    <Content Include="Scripts\Three\exporters\SceneExporter.js" />
+    <Content Include="Scripts\Three\exporters\STLBinaryExporter.js" />
+    <Content Include="Scripts\Three\exporters\STLExporter.js" />
+    <Content Include="Scripts\Three\exporters\TypedGeometryExporter.js" />
+    <Content Include="Scripts\Three\geometries\ConvexGeometry.js" />
+    <Content Include="Scripts\Three\geometries\hilbert2D.js" />
+    <Content Include="Scripts\Three\geometries\hilbert3D.js" />
+    <Content Include="Scripts\Three\ImprovedNoise.js" />
+    <Content Include="Scripts\Three\libs\dat.gui.min.js" />
+    <Content Include="Scripts\Three\libs\msgpack-js.js" />
+    <Content Include="Scripts\Three\libs\pnltri.min.js" />
+    <Content Include="Scripts\Three\libs\require.js" />
+    <Content Include="Scripts\Three\libs\stats.min.js" />
+    <Content Include="Scripts\Three\libs\system.min.js" />
+    <Content Include="Scripts\Three\libs\tween.min.js" />
+    <Content Include="Scripts\Three\loaders\AssimpJSONLoader.js" />
+    <Content Include="Scripts\Three\loaders\AWDLoader.js" />
+    <Content Include="Scripts\Three\loaders\BabylonLoader.js" />
+    <Content Include="Scripts\Three\loaders\BinaryLoader.js" />
+    <Content Include="Scripts\Three\loaders\ColladaLoader.js" />
+    <Content Include="Scripts\Three\loaders\ctm\ctm.js" />
+    <Content Include="Scripts\Three\loaders\ctm\CTMLoader.js" />
+    <Content Include="Scripts\Three\loaders\ctm\CTMWorker.js" />
+    <Content Include="Scripts\Three\loaders\ctm\license\js-lzma.txt" />
+    <Content Include="Scripts\Three\loaders\ctm\license\js-openctm.txt" />
+    <Content Include="Scripts\Three\loaders\ctm\license\OpenCTM.txt" />
+    <Content Include="Scripts\Three\loaders\ctm\lzma.js" />
+    <Content Include="Scripts\Three\loaders\DDSLoader.js" />
+    <Content Include="Scripts\Three\loaders\gltf\glTF-parser.js" />
+    <Content Include="Scripts\Three\loaders\gltf\glTFAnimation.js" />
+    <Content Include="Scripts\Three\loaders\gltf\glTFLoader.js" />
+    <Content Include="Scripts\Three\loaders\gltf\glTFLoaderUtils.js" />
+    <Content Include="Scripts\Three\loaders\MTLLoader.js" />
+    <Content Include="Scripts\Three\loaders\OBJLoader.js" />
+    <Content Include="Scripts\Three\loaders\OBJLoader2.js" />
+    <Content Include="Scripts\Three\loaders\OBJMTLLoader.js" />
+    <Content Include="Scripts\Three\loaders\PDBLoader.js" />
+    <Content Include="Scripts\Three\loaders\PLYLoader.js" />
+    <Content Include="Scripts\Three\loaders\SceneLoader.js" />
+    <Content Include="Scripts\Three\loaders\STLLoader.js" />
+    <Content Include="Scripts\Three\loaders\SVGLoader.js" />
+    <Content Include="Scripts\Three\loaders\TGALoader.js" />
+    <Content Include="Scripts\Three\loaders\UTF8Loader.js" />
+    <Content Include="Scripts\Three\loaders\VRMLLoader.js" />
+    <Content Include="Scripts\Three\loaders\VTKLoader.js" />
+    <Content Include="Scripts\Three\MarchingCubes.js" />
+    <Content Include="Scripts\Three\math\ColorConverter.js" />
+    <Content Include="Scripts\Three\math\Lut.js" />
+    <Content Include="Scripts\Three\MD2Character.js" />
+    <Content Include="Scripts\Three\MD2CharacterComplex.js" />
+    <Content Include="Scripts\Three\Mirror.js" />
+    <Content Include="Scripts\Three\modifiers\ExplodeModifier.js" />
+    <Content Include="Scripts\Three\modifiers\SubdivisionModifier.js" />
+    <Content Include="Scripts\Three\modifiers\TessellateModifier.js" />
+    <Content Include="Scripts\Three\Ocean.js" />
+    <Content Include="Scripts\Three\Octree.js" />
+    <Content Include="Scripts\Three\ParametricGeometries.js" />
+    <Content Include="Scripts\Three\postprocessing\BloomPass.js" />
+    <Content Include="Scripts\Three\postprocessing\BokehPass.js" />
+    <Content Include="Scripts\Three\postprocessing\DotScreenPass.js" />
+    <Content Include="Scripts\Three\postprocessing\EffectComposer.js" />
+    <Content Include="Scripts\Three\postprocessing\FilmPass.js" />
+    <Content Include="Scripts\Three\postprocessing\GlitchPass.js" />
+    <Content Include="Scripts\Three\postprocessing\MaskPass.js" />
+    <Content Include="Scripts\Three\postprocessing\RenderPass.js" />
+    <Content Include="Scripts\Three\postprocessing\SavePass.js" />
+    <Content Include="Scripts\Three\postprocessing\ShaderPass.js" />
+    <Content Include="Scripts\Three\postprocessing\TexturePass.js" />
+    <Content Include="Scripts\Three\PRNG.js" />
+    <Content Include="Scripts\Three\renderers\CSS2DRenderer.js" />
+    <Content Include="Scripts\Three\renderers\CSS3DRenderer.js" />
+    <Content Include="Scripts\Three\renderers\RaytracingRenderer.js" />
+    <Content Include="Scripts\Three\renderers\SoftwareRenderer.js" />
+    <Content Include="Scripts\Three\renderers\SVGRenderer.js" />
+    <Content Include="Scripts\Three\renderers\WebGLDeferredRenderer.js" />
+    <Content Include="Scripts\Three\renderers\WebGLRenderer3.js" />
+    <Content Include="Scripts\Three\ShaderDeferred.js" />
+    <Content Include="Scripts\Three\ShaderGodRays.js" />
+    <Content Include="Scripts\Three\ShaderSkin.js" />
+    <Content Include="Scripts\Three\shaders\BasicShader.js" />
+    <Content Include="Scripts\Three\shaders\BleachBypassShader.js" />
+    <Content Include="Scripts\Three\shaders\BlendShader.js" />
+    <Content Include="Scripts\Three\shaders\BokehShader.js" />
+    <Content Include="Scripts\Three\shaders\BokehShader2.js" />
+    <Content Include="Scripts\Three\shaders\BrightnessContrastShader.js" />
+    <Content Include="Scripts\Three\shaders\ColorCorrectionShader.js" />
+    <Content Include="Scripts\Three\shaders\ColorifyShader.js" />
+    <Content Include="Scripts\Three\shaders\ConvolutionShader.js" />
+    <Content Include="Scripts\Three\shaders\CopyShader.js" />
+    <Content Include="Scripts\Three\shaders\DigitalGlitch.js" />
+    <Content Include="Scripts\Three\shaders\DOFMipMapShader.js" />
+    <Content Include="Scripts\Three\shaders\DotScreenShader.js" />
+    <Content Include="Scripts\Three\shaders\EdgeShader.js" />
+    <Content Include="Scripts\Three\shaders\EdgeShader2.js" />
+    <Content Include="Scripts\Three\shaders\FilmShader.js" />
+    <Content Include="Scripts\Three\shaders\FocusShader.js" />
+    <Content Include="Scripts\Three\shaders\FresnelShader.js" />
+    <Content Include="Scripts\Three\shaders\FXAAShader.js" />
+    <Content Include="Scripts\Three\shaders\HorizontalBlurShader.js" />
+    <Content Include="Scripts\Three\shaders\HorizontalTiltShiftShader.js" />
+    <Content Include="Scripts\Three\shaders\HueSaturationShader.js" />
+    <Content Include="Scripts\Three\shaders\KaleidoShader.js" />
+    <Content Include="Scripts\Three\shaders\LuminosityShader.js" />
+    <Content Include="Scripts\Three\shaders\MirrorShader.js" />
+    <Content Include="Scripts\Three\shaders\NormalMapShader.js" />
+    <Content Include="Scripts\Three\shaders\OceanShaders.js" />
+    <Content Include="Scripts\Three\shaders\RGBShiftShader.js" />
+    <Content Include="Scripts\Three\shaders\SepiaShader.js" />
+    <Content Include="Scripts\Three\shaders\SSAOShader.js" />
+    <Content Include="Scripts\Three\shaders\TechnicolorShader.js" />
+    <Content Include="Scripts\Three\shaders\TriangleBlurShader.js" />
+    <Content Include="Scripts\Three\shaders\UnpackDepthRGBAShader.js" />
+    <Content Include="Scripts\Three\shaders\VerticalBlurShader.js" />
+    <Content Include="Scripts\Three\shaders\VerticalTiltShiftShader.js" />
+    <Content Include="Scripts\Three\shaders\VignetteShader.js" />
+    <Content Include="Scripts\Three\ShaderTerrain.js" />
+    <Content Include="Scripts\Three\ShaderToon.js" />
+    <Content Include="Scripts\Three\SimplexNoise.js" />
+    <Content Include="Scripts\Three\SimulationRenderer.js" />
+    <Content Include="Scripts\Three\SkyShader.js" />
+    <Content Include="Scripts\Three\Sparks.js" />
+    <Content Include="Scripts\Three\three.js" />
+    <Content Include="Scripts\Three\three.min.js" />
+    <Content Include="Scripts\Three\TypedArrayUtils.js" />
+    <Content Include="Scripts\Three\UCSCharacter.js" />
+    <Content Include="Scripts\Three\utils\GeometryUtils.js" />
+    <Content Include="Scripts\Three\utils\UVsUtils.js" />
+    <Content Include="Scripts\Three\WaterShader.js" />
+    <Content Include="Scripts\Three\wip\benchmark\BoxGeometry2.js" />
+    <Content Include="Scripts\Three\wip\benchmark\Geometry2.js" />
+    <Content Include="Scripts\Three\wip\benchmark\Geometry2Loader.js" />
+    <Content Include="Scripts\Three\wip\benchmark\Geometry3.js" />
+    <Content Include="Scripts\Three\wip\benchmark\Geometry4.js" />
+    <Content Include="Scripts\Three\wip\benchmark\Geometry5.js" />
+    <Content Include="Scripts\Three\wip\benchmark\Geometry5b.js" />
+    <Content Include="Scripts\Three\wip\benchmark\IndexedGeometry3.js" />
+    <Content Include="Scripts\Three\wip\benchmark\IndexedGeometry5.js" />
+    <Content Include="Scripts\Three\wip\benchmark\IndexedPlaneGeometry5.js" />
+    <Content Include="Scripts\Three\wip\benchmark\PlaneBufferGeometry.js" />
+    <Content Include="Scripts\Three\wip\benchmark\PlaneGeometry.js" />
+    <Content Include="Scripts\Three\wip\benchmark\PlaneGeometry2.js" />
+    <Content Include="Scripts\Three\wip\benchmark\PlaneGeometry2b.js" />
+    <Content Include="Scripts\Three\wip\benchmark\PlaneGeometry3.js" />
+    <Content Include="Scripts\Three\wip\benchmark\PlaneGeometry5.js" />
+    <Content Include="Scripts\Three\wip\benchmark\PlaneGeometry6.js" />
+    <Content Include="Scripts\Three\wip\benchmark\PlaneGeometry99.js" />
+    <Content Include="Scripts\Three\wip\benchmark\TypedGeometry.js" />
+    <Content Include="Scripts\Three\wip\CircleTypedGeometry.js" />
+    <Content Include="Scripts\Three\wip\GeometryEditor.js" />
+    <Content Include="Scripts\Three\wip\IndexedTypedGeometry.js" />
+    <Content Include="Scripts\Three\wip\PlaneTypedGeometry.js" />
+    <Content Include="Scripts\Three\wip\proxies\MultiColor.js" />
+    <Content Include="Scripts\Three\wip\proxies\MultiVector3.js" />
+    <Content Include="Scripts\Three\wip\proxies\ProxyColor.js" />
+    <Content Include="Scripts\Three\wip\proxies\ProxyFace3.js" />
+    <Content Include="Scripts\Three\wip\proxies\ProxyVector2.js" />
+    <Content Include="Scripts\Three\wip\proxies\ProxyVector3.js" />
+    <Content Include="Scripts\Three\wip\proxies\ProxyVector4.js" />
+    <Content Include="Scripts\Three\wip\ProxyGeometry.js" />
+    <Content Include="Scripts\Three\wip\TypedGeometry.js" />
+    <Content Include="Scripts\Timeline_js\css\blank.gif" />
+    <Content Include="Scripts\Timeline_js\css\fancybox_sprite%402x.png" />
+    <Content Include="Scripts\Timeline_js\css\fancybox_sprite.png" />
+    <Content Include="Scripts\Timeline_js\css\loading.gif" />
+    <Content Include="Scripts\Timeline_js\css\themes\dark.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\AbrilFatface-Average.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\Arvo-PTSans.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\Bevan-PotanoSans.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\BreeSerif-OpenSans.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\DroidSerif-DroidSans.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\Georgia-Helvetica.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\Lekton-Molengo.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\Lora-Istok.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\Merriweather-NewsCycle.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\NewsCycle-Merriweather.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\NixieOne-Ledger.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\Pacifico-Arimo.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\PlayfairDisplay-Muli.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\PoiretOne-Molengo.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\PT.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\PTSerif-PTSans.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\Rancho-Gudea.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\font\SansitaOne-Kameron.css" />
+    <Content Include="Scripts\Timeline_js\css\themes\timeline-dark%402x.png" />
+    <Content Include="Scripts\Timeline_js\css\themes\timeline-dark.png" />
+    <Content Include="Scripts\Timeline_js\css\themes\timeline-texture.png" />
+    <Content Include="Scripts\Timeline_js\css\timeline%402x.png" />
+    <Content Include="Scripts\Timeline_js\css\timeline.css" />
+    <Content Include="Scripts\Timeline_js\css\timeline.png" />
+    <Content Include="Scripts\Timeline_js\embed\index.html" />
+    <Content Include="Scripts\Timeline_js\js\locale\af.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\ar.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\bg.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\ca.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\cz.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\da.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\de.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\el.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\en-24hr.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\en-week.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\en.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\eo.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\es.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\et.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\eu.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\fa.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\fi.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\fo.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\fr.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\gl.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\he.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\hr.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\hu.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\hy.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\id.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\is.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\it.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\iw.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\ja.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\ka.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\ko.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\lb.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\lt.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\lv.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\ms.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\ne.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\nl.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\no.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\pl.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\pt-br.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\pt.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\rm.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\ro.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\ru.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\si.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\sk.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\sl.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\sr-cy.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\sr.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\sv.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\ta.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\te.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\th.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\tl.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\tr.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\uk.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\zh-cn.js" />
+    <Content Include="Scripts\Timeline_js\js\locale\zh-tw.js" />
+    <Content Include="Scripts\Timeline_js\js\storyjs-embed-cdn.js" />
+    <Content Include="Scripts\Timeline_js\js\storyjs-embed-generator.js" />
+    <Content Include="Scripts\Timeline_js\js\storyjs-embed.js" />
+    <Content Include="Scripts\Timeline_js\js\timeline-min.js" />
+    <Content Include="Scripts\Timeline_js\js\timeline.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Analysis\Index.cshtml" />
+    <Content Include="Views\Home\Map.cshtml" />
+    <Content Include="Views\Home\Messages.cshtml" />
+    <Content Include="Views\Home\null.cshtml" />
+    <Content Include="Views\Home\SensorList.cshtml" />
+    <Content Include="Views\Home\TimelineJS.cshtml" />
+    <Content Include="Views\Home\WebGL.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Project\Create.cshtml" />
+    <Content Include="Views\Project\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutEmpty.cshtml" />
+    <Content Include="Views\Shared\_LayoutSideBar.cshtml" />
+    <Content Include="Views\Project\Details.cshtml" />
+    <Content Include="Views\AddProject\Index.cshtml" />
+    <Content Include="Views\Wire\BruggStrain.cshtml" />
+    <Content Include="Views\Analysis\TestCouchPassingData.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime2.cshtml" />
+    <Content Include="Views\Shared\_LayoutDocs.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\decimal.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DataSheetDocArray.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\String.cshtml" />
+    <Content Include="Views\Wire\Index.cshtml" />
+    <Content Include="Views\BIMView\Error.cshtml" />
+    <Content Include="Views\BIMView\Index.cshtml" />
+    <Content Include="Views\BIMView\ViewModel.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TimeLineItem.cshtml" />
+    <Content Include="Views\Project\Timeline.cshtml" />
+    <Content Include="Views\Project\Map.cshtml" />
+    <Content Include="Views\Project\AddTimelineItem.cshtml" />
+    <Content Include="Views\Shared\_Alerts.cshtml" />
+    <Content Include="Views\Project\UpLoad.cshtml" />
+    <Content Include="Views\Project\RealtimeSensor.cshtml" />
+    <Content Include="Views\Vis\graph3d\playground\datasource.php" />
+    <Content Include="Views\Vis\index.cshtml" />
+    <Content Include="Views\Vis\network\data\WorldCup2014.json" />
+    <Content Include="Views\Vis\timeline\data\basic.json" />
+    <Content Include="Views\Vis\timeline\data\wk2014.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\Data\Cables\" />
+    <Folder Include="Content\Data\files\Cables\" />
+    <Folder Include="Content\StaticHTML\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53130</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53130/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.94.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.94.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

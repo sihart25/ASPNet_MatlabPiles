@@ -1,0 +1,47 @@
+﻿@model   CSICDemoDec.Models.TimeLineItem
+@{
+    ViewBag.Title = "TimeLineItem";
+}
+
+<h2>TimeLineItem</h2>
+
+<div>
+    <div>
+        <ul> 
+            <li><h3>Headline:</h3><p> @Html.TextBoxFor(model => model.TimeLineItemHeadline)</p></li>
+            <li><h3>Timeline Item Start Date :</h3><p> @Html.EditorFor(model => model.TimeLineItemBeginTime, new { PreviousYearCount = 10, NextYearCount = 10 })</p></li>
+            <li><h3>Timeline Item End Date :</h3><p> @Html.EditorFor(model => model.TimeLineItemEndTime, new { PreviousYearCount = 10, NextYearCount = 10 })</p></li> 
+            <li><h3>Text:</h3><p>@Html.TextAreaFor(model => model.TimeLineItemText, new { id = "textarea1", cols = "350", rows = "5", wrap = "virtual", style = "overflow:auto;resize:none" })  </p></li>
+            <li><h3>Media:</h3><p> @Html.TextBoxFor(model => model.TimeLineItemMedia)</p></li>
+            <li><h3>MediaCredit:</h3><p> @Html.TextBoxFor(model => model.TimeLineItemMediaCredit)</p></li>
+            <li><h3>MediaCaption:</h3><p> @Html.TextBoxFor(model => model.TimeLineItemMediaCaption)</p></li>
+            <li><h3>MediaThumbnail:</h3><p> @Html.TextBoxFor(model => model.TimeLineItemMediaThumbnail)</p></li>
+
+           
+            <li><h3>Type:</h3> </li>
+            <li>
+                <h3>Tag:</h3>
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    Dropdown
+                    <span class="caret"></span>
+                </button>
+            </li>
+             
+            
+              
+            Type
+            Tag 
+
+
+
+        </ul>   
+    </div> 
+    <p>
+        <button id="projtype0Btn" type="button" class="btn btn-default" onclick="projtype(0)">Pile</button>
+        <button id="projtype1Btn" type="button" class="btn btn-default" onclick="projtype(1)">Tunnel</button> 
+    </p>
+</div>
+
+
+
+
